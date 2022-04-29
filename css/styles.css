@@ -794,6 +794,56 @@ body{
     left: 0;
 }
 
+/* ------------------------------------------------------------------- 
+ * ## about
+------------------------------------------------------------------- */
+.about {
+    height: 100%;
+    width: 100%;
+    background: rgb(226, 226, 226);
+}
+
+.about .row {
+    height: 100%;
+    width: 96%;
+    padding-top: 5rem;
+}
+.profilePic {
+    height: auto;
+    width: 80%;
+    border:double 1rem #2fa6f5;
+    border-radius: 50%;
+}
+
+.about-col h3{
+    font-family: var(--font-1);
+    font-size: 2.6rem ;
+    font-weight: 400;
+    color: #0189f8;
+    text-shadow: 0 0 .05em blue;
+}
+
+.about-col h3::after{
+    content: "";
+    display: block;
+    width: 13rem;
+    height: 5px;
+    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(0, 174, 163));
+    position: relative;
+    bottom: -15px;
+}
+
+
+
+.story {
+    background-color: blue;
+}
+
+
+
+
+
+
 
 
 
