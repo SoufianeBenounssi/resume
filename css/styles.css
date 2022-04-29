@@ -798,21 +798,61 @@ body{
  * ## about
 ------------------------------------------------------------------- */
 .about {
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    background: rgb(226, 226, 226);
+    background: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden ;
+}
+
+.about_bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 65%;
+    background: url(../images/lightWallpaper2.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.about_bg:before {
+    content: "";
+    position: absolute;top: 0;
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(to bottom, rgba(3, 15, 28, 0.938), rgba(3, 15, 28, 0.897), rgba(3, 15, 28, 0.797), rgba(3, 15, 28, 0.683),rgba(3, 15, 28, 0.53),rgba(3, 15, 28, 0.461),rgba(3, 15, 28, 0.329),rgba(3, 15, 28, 0.235),rgba(3, 15, 28, 0.087),rgba(3, 15, 28, 0));
+}
+
+.about_bg:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background: linear-gradient(to top, white, transparent);
 }
 
 .about .row {
     height: 100%;
     width: 96%;
     padding-top: 5rem;
+    position: relative;
+    top: 10rem;
+    left: 8%;
 }
 .profilePic {
     height: auto;
     width: 80%;
     border:double 1rem #2fa6f5;
     border-radius: 50%;
+    position: relative;
+    top: 10%;
+    left: -8%;
 }
 
 .about-col h3{
@@ -836,7 +876,15 @@ body{
 
 
 .story {
-    background-color: blue;
+    padding: 1rem;
+    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(31, 113, 255));;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 3rem;
+    width: 80%;
+    border-radius: 20px;
+    color: white;
+    font-family: var(--font-mono);
 }
 
 
