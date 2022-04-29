@@ -3,7 +3,7 @@
 window.addEventListener('scroll', function(){
     var value = window.scrollY;
 
-    document.getElementById("home_bg").style.transform = `translateY(${value * .3}px)`;
+    document.getElementById("home_bg").style.transform = `translateY(${value * .24}px)`;
 });
 
 function dark(){
