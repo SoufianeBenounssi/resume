@@ -1,4 +1,20 @@
+const header = document.getElementById('header');
+const hero = document.getElementById('hero');
 
+const heroOptions = {};
+
+const heroObserver = new IntersectionObserver(function(entries, heroObserver) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+
+}, heroOptions);
+
+heroObserver.observe(hero);
 
 window.addEventListener('scroll', function(){
     var value = window.scrollY;
@@ -7,10 +23,11 @@ window.addEventListener('scroll', function(){
 });
 
 function dark(){
-    let hdrColor = document.getElementById("nav_wrap") 
+    let hdrColor = document.querySelector("header") 
     document.getElementById("home_bg").classList.toggle("hero_bg-dark")
-    hdrColor.classList.toggle("header_dark-nav")
+    hdrColor.classList.toggle("header_dark")
     document.getElementById("darkMode").classList.toggle("lightMode")
 };
+
 
 
