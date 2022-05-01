@@ -266,10 +266,38 @@ header {
     left: 0;
 }
 
-.header-scrolled {
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
+header.offset{
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+header.scrolling {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+
+header.sticky::before{
+    visibility: visible;
+}
+
+header.sticky{
+    opacity: 0;
+    visibility: hidden;
+    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(129, 252, 244, 0.845),rgb(255, 255, 255, 0.845));
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%);
+    top: 0;
+    left: 0;
+    transition: .7s ease-in-out;
+    -webkit-transition: .7s ease-in-out;
+}
+
+header.sticky.scrolled {
+    opacity: 1;
+    visibility: visible;
     position: fixed;
+
 }
 
 .header_dark{

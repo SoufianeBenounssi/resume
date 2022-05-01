@@ -1,20 +1,60 @@
 const header = document.querySelector("header");
 const hero = document.querySelector(".hero_bg");
 
-const heroOptions = {};
+const sticky = {
+    rootMargin: "-760px 0px 0px 0px"
+};
 
-const heroObserver = new IntersectionObserver(function(entries, heroObserver) {
+const stickyObserver = new IntersectionObserver(function(entries, stickyObserver) {
     entries.forEach(entry => {
         if (!entry.isIntersecting){
-            header.classList.add('header-scrolled');
+            header.classList.add("sticky");
         } else {
-            header.classList.remove('header-scrolled');
+            header.classList.remove("sticky");
         }
     });
+}, sticky);
 
-}, heroOptions);
+stickyObserver.observe(hero);
+/*
+*/
+const offset = {
+    rootMargin: "-500px 0px 0px 0px"
+};
 
-heroObserver.observe(hero);
+const offsetObserver = new IntersectionObserver(function(entries, offsetObserver) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+            header.classList.add("offset");
+        } else {
+            header.classList.remove("offset");
+        }
+    });
+}, offset);
+
+offsetObserver.observe(hero);
+
+
+/*
+*/
+const scrolled = {
+    rootMargin: "-5px 0px 0px 0px"
+};
+
+const scrolledObserver = new IntersectionObserver(function(entries, scrolledObserver) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+            header.classList.remove("offset");
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+}, scrolled);
+
+scrolledObserver.observe(hero);
+
+
 
 
 window.addEventListener('scroll', function(){
