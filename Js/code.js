@@ -1,5 +1,5 @@
-const header = document.getElementById('header');
-const hero = document.getElementById('hero');
+const header = document.querySelector("header");
+const hero = document.querySelector(".hero_bg");
 
 const heroOptions = {};
 
@@ -15,6 +15,7 @@ const heroObserver = new IntersectionObserver(function(entries, heroObserver) {
 }, heroOptions);
 
 heroObserver.observe(hero);
+
 
 window.addEventListener('scroll', function(){
     var value = window.scrollY;

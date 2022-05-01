@@ -1,5 +1,5 @@
 const header = document.querySelector('header');
-const hero = document.querySelector('.hero');
+const hero = document.querySelector('.hero_bg');
 
 const heroOptions = {};
 
