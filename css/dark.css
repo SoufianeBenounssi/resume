@@ -804,7 +804,7 @@ header.sticky.scrolled {
 .profilePic {
     height: auto;
     width: 80%;
-    border:double 1rem #2fa6f5;
+    border:double 1rem #840b0b;
     border-radius: 50%;
     position: relative;
     top: 10%;
@@ -815,7 +815,7 @@ header.sticky.scrolled {
     font-family: var(--font-1);
     font-size: 2.6rem ;
     font-weight: 400;
-    color: #0189f8;
+    color: #b73030;
 }
 
 .about-col h3::after{
@@ -823,7 +823,7 @@ header.sticky.scrolled {
     display: block;
     width: 13rem;
     height: 5px;
-    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(0, 174, 163));
+    background: linear-gradient(150deg, rgb(49, 48, 48), rgba(53, 53, 53, 0.845), rgba(53, 53, 53, 0.632), rgba(224, 82, 82, 0.845), rgba(161, 38, 38, 0.845),rgb(161, 21, 21));
     position: relative;
     border-radius: 5px;
     bottom: -15px;
@@ -833,7 +833,7 @@ header.sticky.scrolled {
 
 .story {
     padding: 1rem;
-    background: linear-gradient(250deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(31, 113, 255));;
+    background: linear-gradient(170deg, rgb(49, 48, 48), rgb(53, 53, 53), rgba(133, 31, 31, 0.845), rgba(133, 31, 31, 0.845),rgb(53, 53, 53));
     font-size: 1.5rem;
     letter-spacing: 1px;
     line-height: 3rem;
