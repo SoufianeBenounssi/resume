@@ -6,16 +6,16 @@
     <meta name="Author" content="Soufiane Benounssi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link id="mode" type="text/css" rel="stylesheet" href="css/styles.css" style="transition: all .3s ease-in-out;">
     <script src="Js/code.js" defer></script>
-    <script src="Js/plugins.js"></script>
+    <script src="Js/plugins.js" defer></script>
     <title>Soufiane Benounssi</title>
 </head>
 
 <body>
     
     <header id="header" class="header">
-        <a class="Dark_Mode-btn" id="Dark_mode" onclick="dark()" href="#"><img class="darkMode-toggle" id="darkMode" src="images/lightMode.png" alt=""></a>
+        <a class="Dark_Mode-btn" id="Dark_mode" onclick="darkSwitch()" href="#"><img class="darkMode-toggle" id="darkMode" src="images/lightMode.png" alt=""></a>
         <div id="nav_wrap" class="row header_nav-wrap">
             <nav class="header_nav">
                 <ul>
@@ -35,7 +35,7 @@
     <!-- Hero 
     ==================================================================-->
     <section id="hero" class="hero target-section">
-        <div id="home_bg" class="hero_bg"></div>
+        <div id="home_bg" class="hero_bg rellax" data-rellax-speed="-7"></div>
 
         <div class="row hero_content">
             <div class="column">

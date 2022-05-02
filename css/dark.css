@@ -259,11 +259,14 @@ header {
     z-index: 100;
     width: 100%;
     z-index: 999;
-    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(129, 252, 244, 0.845),rgb(255, 255, 255, 0.845));
+    background: linear-gradient(150deg, rgb(9, 9, 9), rgba(53, 53, 53, 0.845), rgba(224, 82, 82, 0.845),rgba(243, 53, 53, 0.845));
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%);
     position: absolute;
     top: 0;
     left: 0;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    
 }
 
 header.offset{
@@ -276,16 +279,20 @@ header.offset{
 header.scrolling {
     transform: translateY(0);
     -webkit-transform: translateY(0);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 header.sticky::before{
     visibility: visible;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 header.sticky{
     opacity: 0;
     visibility: hidden;
-    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(129, 252, 244, 0.845),rgb(255, 255, 255, 0.845));
+    background: linear-gradient(150deg, rgb(9, 9, 9), rgba(53, 53, 53, 0.845), rgba(224, 82, 82, 0.845),rgba(243, 53, 53, 0.845));
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%);
     top: 0;
     left: 0;
@@ -301,22 +308,7 @@ header.sticky.scrolled {
     -webkit-transition: .7s ease-in-out;
 }
 
-.header_dark{
-    height: 7rem;
-    z-index: 100;
-    width: 100%;
-    background-image: linear-gradient(150deg, rgb(9, 9, 9), rgba(53, 53, 53, 0.845), rgba(224, 82, 82, 0.845),rgba(243, 53, 53, 0.845));
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
-.header_dark-scrolled {
-    position: fixed;
-    transition: width 1s,height 1s, left 1s, top 1s, position 1s;
-    -webkit-transition: all .3 ease-in-out;
-}
 
 .header_nav-wrap {
    height: 9rem;
@@ -327,6 +319,8 @@ header.sticky.scrolled {
    overflow: hidden;
    position:absolute;
    top: -1.5rem;
+   transition: all .3s ease-in-out;
+   -webkit-transition: all .3s ease-in-out;
 }
 
 
@@ -343,6 +337,8 @@ header.sticky.scrolled {
     height: 35px;
     z-index: 100;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 .darkMode-toggle {
@@ -351,17 +347,11 @@ header.sticky.scrolled {
   position: relative;
   left: -15%;
   top: 5%;
-  filter: invert(1);
+  filter: invert(0);
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
 }
 
-.lightMode {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    left: -15%;
-    top: 5%;
-    filter: invert(0);
-  }
 
 .header_nav{
     font-family: var(--font-1);
@@ -372,6 +362,8 @@ header.sticky.scrolled {
     letter-spacing: 2px;
     position: inherit;
     top: 2rem;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 .header_nav ul{
@@ -379,6 +371,8 @@ header.sticky.scrolled {
     text-align: center;
     margin: 0;
     padding:0;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 .header_nav li{
@@ -387,6 +381,8 @@ header.sticky.scrolled {
     display:inline-block;
     margin: 0;
     padding: 0 .8rem;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 .header_nav a{
@@ -401,14 +397,16 @@ header.sticky.scrolled {
 
 .header_nav a:hover {
     background-color: rgb(255, 255, 255);
-    color: var(--color-2);
+    color: rgb(162, 18, 18);
     border-radius: 10px;
     font-weight: 500;
     transition: all .3s ease-in-out;
 }
 
 .header_nav .current a{
-    color:rgb(255, 157, 30);
+    color: rgb(214, 27, 27);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 /* ------------------------------------------------------------------- 
@@ -512,24 +510,13 @@ header.sticky.scrolled {
     width: 100%;
     height: 100%;
     padding: 50vh 0;
-    background: #123 url(../images/lightWallpaper.jpg);
+    background: url(../images/darkWallpaper2.png);
     background-position: center;
     background-size: cover;
     color: white;
 }
-.hero_bg:before{
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: .4;
-}
+
+
 
 .hero_bg:after{
     display: block;
@@ -542,7 +529,7 @@ header.sticky.scrolled {
     width: 100%;
     height: 100%;
     background: linear-gradient(360deg, black 15%,rgba(0,0,0,0) 100%);
-    opacity: .4;
+    opacity: .3;
 }
 
 /* ------------------------------------------------------------
@@ -798,29 +785,14 @@ header.sticky.scrolled {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 65%;
-    background: url(../images/lightWallpaper2.jpg);
+    height: 100%;
+    background: var(--color-gray-18);
     background-position: center;
     background-size: cover;
     
 }
 
-.about_bg:before {
-    content: "";
-    position: absolute;top: 0;
-    width: 100%;
-    height: 90%;
-    background: linear-gradient(to bottom, rgba(9, 38, 71, 0.938), rgba(9, 38, 71, 0.897), rgba(9, 38, 71, 0.797), rgba(9, 38, 71, 0.683),rgba(9, 38, 71, 0.53),rgba(9, 38, 71, 0.461),rgba(9, 38, 71, 0.329),rgba(9, 38, 71, 0.235),rgba(9, 38, 71, 0.087),rgba(9, 38, 71, 0));
-}
 
-.about_bg:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 5%;
-    background: linear-gradient(to top, white, transparent);
-}
 
 .about .row {
     height: 100%;
