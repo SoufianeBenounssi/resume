@@ -255,6 +255,8 @@ body{
 header {
     --header-height: 4.8rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 7rem;
     z-index: 100;
     width: 100%;
@@ -267,56 +269,21 @@ header {
 }
 
 header.offset{
-    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
-    -webkit-transition: all .5s;
-    transition: all .5s;
+    -webkit-transform: translateY(-100%);
+    transition:  .7s ease;
 }
 
-header.scrolling {
+header.scrolled {
     transform: translateY(0);
     -webkit-transform: translateY(0);
-}
-
-header.sticky::before{
-    visibility: visible;
-}
-
-header.sticky{
-    opacity: 0;
-    visibility: hidden;
-    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(129, 252, 244, 0.845),rgb(255, 255, 255, 0.845));
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%);
-    top: 0;
-    left: 0;
-    transition: .7s ease-in-out;
-    -webkit-transition: .7s ease-in-out;
-}
-
-header.sticky.scrolled {
     opacity: 1;
     visibility: visible;
     position: fixed;
-    transition: .7s ease-in-out;
-    -webkit-transition: .7s ease-in-out;
+    transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
 }
 
-.header_dark{
-    height: 7rem;
-    z-index: 100;
-    width: 100%;
-    background-image: linear-gradient(150deg, rgb(9, 9, 9), rgba(53, 53, 53, 0.845), rgba(224, 82, 82, 0.845),rgba(243, 53, 53, 0.845));
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.header_dark-scrolled {
-    position: fixed;
-    transition: width 1s,height 1s, left 1s, top 1s, position 1s;
-    -webkit-transition: all .3 ease-in-out;
-}
 
 .header_nav-wrap {
    height: 9rem;
@@ -336,32 +303,23 @@ header.sticky.scrolled {
  * ------------------------------------------------------------------- */
 .Dark_Mode-btn{
     display: inline-block;
-    position: inherit;
-    top: .2rem;
-    left: .4%;
+    position:relative;
+    top: -1.5rem;
+    padding: 0 .5rem;
     width: 35px;
     height: 35px;
     z-index: 100;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
 }
 
 .darkMode-toggle {
   width: 30px;
   height: 30px;
-  position: relative;
-  left: -15%;
-  top: 5%;
+  position:relative;
   filter: invert(1);
 }
-
-.lightMode {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    left: -15%;
-    top: 5%;
-    filter: invert(0);
-  }
 
 .header_nav{
     font-family: var(--font-1);
@@ -401,7 +359,7 @@ header.sticky.scrolled {
 
 .header_nav a:hover {
     background-color: rgb(255, 255, 255);
-    color: var(--color-2);
+    color: rgb(1, 158, 248);
     border-radius: 10px;
     font-weight: 500;
     transition: all .3s ease-in-out;
@@ -409,6 +367,41 @@ header.sticky.scrolled {
 
 .header_nav .current a{
     color:rgb(255, 157, 30);
+}
+
+.contact a{
+    font-family: var(--font-1);
+    background-color: #019ef8;
+    font-size: .95rem;
+    display: block;
+    line-height: 3.8rem;
+    padding: 0 .8rem;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    position: relative;
+    top: -.7rem;
+    right: 20%;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.contact a:hover {
+    font-family: var(--font-1);
+    background-color: #ffffff;
+    font-size: .95rem;
+    display: block;
+    font-weight: 650;
+    line-height: 3.8rem;
+    padding: 0 .8rem;
+    border-radius: 50px;
+    color: rgb(1, 158, 248);
+    letter-spacing: 2px;
+    position: relative;
+    top: -.7rem;
+    right: 20%;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
 }
 
 /* ------------------------------------------------------------------- 

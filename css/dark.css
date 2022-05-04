@@ -255,6 +255,8 @@ body{
 header {
     --header-height: 4.8rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 7rem;
     z-index: 100;
     width: 100%;
@@ -264,48 +266,26 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    transition: background .3s ease-in-out;
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     
 }
 
 header.offset{
-    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
-    -webkit-transition: all .5s;
-    transition: all .5s;
+    -webkit-transform: translateY(-100%);
+    transition:  .7s ease;
 }
 
-header.scrolling {
+header.scrolled {
     transform: translateY(0);
     -webkit-transform: translateY(0);
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-}
-
-header.sticky::before{
-    visibility: visible;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-}
-
-header.sticky{
-    opacity: 0;
-    visibility: hidden;
-    background: linear-gradient(150deg, rgb(9, 9, 9), rgba(53, 53, 53, 0.845), rgba(224, 82, 82, 0.845),rgba(243, 53, 53, 0.845));
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%);
-    top: 0;
-    left: 0;
-    transition: .7s ease-in-out;
-    -webkit-transition: .7s ease-in-out;
-}
-
-header.sticky.scrolled {
     opacity: 1;
     visibility: visible;
     position: fixed;
-    transition: .7s ease-in-out;
-    -webkit-transition: .7s ease-in-out;
+    transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
 }
 
 
@@ -330,9 +310,9 @@ header.sticky.scrolled {
  * ------------------------------------------------------------------- */
 .Dark_Mode-btn{
     display: inline-block;
-    position: inherit;
-    top: .2rem;
-    left: .4%;
+    position:relative;
+    top: -1.5rem;
+    padding: 0 .5rem;
     width: 35px;
     height: 35px;
     z-index: 100;
@@ -344,9 +324,7 @@ header.sticky.scrolled {
 .darkMode-toggle {
   width: 30px;
   height: 30px;
-  position: relative;
-  left: -15%;
-  top: 5%;
+  position:relative;
   filter: invert(0);
   transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
@@ -407,6 +385,38 @@ header.sticky.scrolled {
     color: rgb(214, 27, 27);
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
+}
+
+.contact a{
+    font-family: var(--font-1);
+    font-size: .95rem;
+    display: block;
+    line-height: 4rem;
+    padding: 0 .8rem;
+    border-radius: 10px;
+    color: rgb(249, 249, 249);
+    letter-spacing: 2px;
+    position: relative;
+    top: -.7rem;
+    right: 20%;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.contact a:hover{
+    font-family: var(--font-1);
+    font-size: 1.1rem;
+    display: block;
+    line-height: 4rem;
+    padding: 0 .8rem;
+    border-radius: 10px;
+    color: rgb(249, 249, 249);
+    letter-spacing: 2px;
+    position: relative;
+    top: -.7rem;
+    right: 20%;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
 }
 
 /* ------------------------------------------------------------------- 

@@ -75,10 +75,6 @@ window.addEventListener('scroll', function(){
 
     document.getElementById("home_bg").style.transform = `translateY(${value * .24}px)`;
 
-    var css = this.document.getElementsByTagName('link')[0];
-    if (css == "css/dark.css"){
-        document.getElementById("home_bg").style.transform = `translateY(${value * .02}px)`;
-    };
 });
 
 
@@ -90,7 +86,7 @@ const hero = document.querySelector('.hero');
 let triggerHeight;
 
 setTimeout(function(){
-    triggerHeight = hero.offsetHeight - 170;
+    triggerHeight = hero.offsetHeight -500;
 }, 300);
 
 window.addEventListener('scroll', function (){
@@ -99,17 +95,11 @@ window.addEventListener('scroll', function (){
            
 
     if (loc > triggerHeight) {
-        hdr.classList.add('sticky');
-    } else {
-        hdr.classList.remove('sticky');
-    }
-    if (loc > triggerHeight + 20) {
         hdr.classList.add('offset');
     } else {
         hdr.classList.remove('offset');
     }
-    if (loc > triggerHeight + 150) {
-        hdr.classList.remove('offset')
+    if (loc > triggerHeight + 490) {
         hdr.classList.add('scrolled');
     } else {
         hdr.classList.remove('scrolled');
