@@ -258,7 +258,6 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 7rem;
-    z-index: 100;
     width: 100%;
     z-index: 999;
     background: linear-gradient(150deg, rgb(9, 9, 9), rgba(53, 53, 53, 0.845), rgba(224, 82, 82, 0.845),rgba(243, 53, 53, 0.845));
