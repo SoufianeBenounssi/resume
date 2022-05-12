@@ -100,6 +100,7 @@ window.addEventListener('scroll', function (){
         hdr.classList.remove('offset');
     }
     if (loc > triggerHeight + 490) {
+        hdr.classList.remove('offset');
         hdr.classList.add('scrolled');
     } else {
         hdr.classList.remove('scrolled');

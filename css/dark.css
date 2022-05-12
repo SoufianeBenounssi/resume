@@ -288,7 +288,6 @@ header.scrolled {
 }
 
 
-
 .header_nav-wrap {
    height: 9rem;
    min-height: 0;
@@ -784,6 +783,7 @@ header.scrolled {
     background: rgb(255, 255, 255);
     position: relative;
     overflow: hidden ;
+    padding-bottom: 12vh;
 }
 
 .about_bg {
@@ -798,7 +798,6 @@ header.scrolled {
     background: var(--color-gray-18);
     background-position: center;
     background-size: cover;
-    
 }
 
 
@@ -813,7 +812,7 @@ header.scrolled {
 .profilePic {
     height: auto;
     width: 80%;
-    border:double 1rem #840b0b;
+    border:double 1rem #b82525;
     border-radius: 50%;
     position: relative;
     top: 10%;
