@@ -297,8 +297,6 @@ header.scrolled {
    top: -1.5rem;
 }
 
-
-
 /* ------------------------------------------------------------------- 
  * ## navigation bar
  * ------------------------------------------------------------------- */
@@ -485,7 +483,7 @@ header.scrolled {
 
 
 /* ------------------------------------------------------------------- 
- * ## mobile navigation bar
+ * ## hero
  * ------------------------------------------------------------------- */
 
 .hero {
@@ -842,7 +840,7 @@ header.scrolled {
     font-family: var(--font-1);
     font-size: 2.6rem ;
     font-weight: 400;
-    color: #c4e4ff;
+    color: #cee8fd;
 }
 
 .about-col h3::after{
@@ -893,14 +891,107 @@ header.scrolled {
     
 }
 
+/* ------------------------------------------------------------------- 
+ * ## skills
+------------------------------------------------------------------- */
+#skills {
+    height: 100vh;
+    background: rgb(227, 237, 247);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-1);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 2rem;
+}
+
+.title h3{
+    font-family: var(--font-1);
+    font-size: 3.6rem;
+    color:#006aa8;
+    font-weight: 400;
+}
+
+.title h3::after{
+    content: "";
+    display: block;
+    width: 9rem;
+    height: 5px;
+    background: linear-gradient(150deg, rgba(88, 165, 253, 0.845), rgb(0, 142, 174));
+    position: relative;
+    border-radius: 5px;
+    bottom: -15px;
+}
+.grid{
+    position: relative;
+    top: 4rem;
+    left: 5rem;
+}
+
+.skills {
+    text-transform: uppercase;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5rem;
+    grid-template-areas: 
+        "Java JS Py Kotlin"
+        "HTML CSS MSOffice Android-Studio";
+    margin: 2rem;
+    color:#006aa8;
+}
+
+.Java { grid-area: Java;}
+.JS { grid-area: JS;}
+.Py { grid-area: Py;}
+.Kotlin{ grid-area: Kotlin;}
+.HTML { grid-area: HTML;}
+.CSS { grid-area: CSS;}
+.MSOffice { grid-area: MSOffice;}
+.Android-Studio{ grid-area: Android-Studio;}
 
 
 
+.skill {
+    height: 250px;
+    position: relative;
+}
 
+.skill h2{
+    position: relative;
+    left: 6rem;
+}
+.MSOffice h2 {
+    position: relative;
+    left: 4rem;
+}
 
+.Android-Studio h2 {
+    position: relative;
+    left: 1.7rem;
+}
+.Py h2 {
+    position: relative;
+    left: 5rem;
+}
 
+.outer {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    border: 1px solid cornflowerblue;
+}
 
-
+.inner {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    border: 1px solid cornflowerblue;
+}
 
 
 
