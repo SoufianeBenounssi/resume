@@ -69,6 +69,7 @@ function darkSwitch(){
 
 
 
+/* *split the code here* */
 
 window.addEventListener('scroll', function(){
     var value = window.scrollY;
@@ -119,5 +120,45 @@ function darkSwitch(){
     };
 }
 
+/* Skills progress bar animation */
+const skills = document.getElementById("skills");
+const Java = document.querySelector(".Java");
+const JS = document.querySelector(".JS");
+const Py = document.querySelector(".Py");
+const Kotlin = document.querySelector(".Kotlin");
+const HTML = document.querySelector(".HTML");
+const CSSanim = document.querySelector(".CSS");
+const MSOffice = document.querySelector(".MSOffice");
+const AndroidStudio = document.querySelector(".Android-Studio");
 
 
+const options = {};
+
+const skillsObserver = new IntersectionObserver(
+    function(entries, skillsObserver) {
+        entries.forEach( entry => {
+            if(entry.isIntersecting){
+                Java.classList.add("animate");
+                JS.classList.add("animate");
+                Py.classList.add("animate");
+                Kotlin.classList.add("animate");
+                HTML.classList.add("animate");
+                CSSanim.classList.add("animate");
+                MSOffice.classList.add("animate");
+                AndroidStudio.classList.add("animate");
+            }else{
+                Java.classList.remove("animate");
+                JS.classList.remove("animate");
+                Py.classList.remove("animate");
+                Kotlin.classList.remove("animate");
+                HTML.classList.remove("animate");
+                CSSanim.classList.remove("animate");
+                MSOffice.classList.remove("animate");
+                AndroidStudio.classList.remove("animate");
+            }
+        });
+    }, 
+    options
+);
+skillsObserver.observe(skills);
+/* Skills progress bar animation end */

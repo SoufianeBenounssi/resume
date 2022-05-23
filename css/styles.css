@@ -797,7 +797,7 @@ header.scrolled {
  * ## about
 ------------------------------------------------------------------- */
 .about {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background: rgb(255, 255, 255);
     position: relative;
@@ -814,7 +814,7 @@ header.scrolled {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgb(0, 119, 255),rgb(52, 147, 255));
+    background: linear-gradient(to right, rgb(0, 119, 255),rgb(102, 173, 255));
     background-position: center;
     background-size: cover;
 }
@@ -938,11 +938,13 @@ header.scrolled {
     display: grid;
     grid-auto-flow: column;
     gap: 5rem;
+    grid-row-gap: 10rem;
     grid-template-areas: 
         "Java JS Py Kotlin"
         "HTML CSS MSOffice Android-Studio";
     margin: 2rem;
     color:#006aa8;
+    font-family: var(--font-1);
 }
 
 .Java { grid-area: Java;}
@@ -961,36 +963,168 @@ header.scrolled {
     position: relative;
 }
 
-.skill h2{
-    position: relative;
-    left: 6rem;
-}
-.MSOffice h2 {
-    position: relative;
-    left: 4rem;
-}
-
-.Android-Studio h2 {
-    position: relative;
-    left: 1.7rem;
-}
-.Py h2 {
-    position: relative;
-    left: 5rem;
-}
 
 .outer {
     height: 260px;
     width: 260px;
     border-radius: 50%;
-    border: 1px solid cornflowerblue;
+    padding: 30.5px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
 .inner {
-    height: 260px;
-    width: 260px;
+    position: relative;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
-    border: 1px solid cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgb(255, 255, 255),
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(255, 255, 255, 0.5);
+                
+}
+
+
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 17px;
+}
+
+/*HTML Aimation*/
+.HTML circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.HTML.animate circle{
+    animation: animHTML 2s linear forwards;
+}
+@keyframes animHTML{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/*animateJava*/
+.Java circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.Java.animate circle{
+    animation: animJava 2s linear forwards;
+}
+@keyframes animJava{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+
+
+
+/*animateJavaScript*/
+.JS circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.JS.animate circle{
+    animation: animJS 2s linear forwards;
+}
+@keyframes animJS{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+
+
+
+/*animatePython*/
+.Py circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.Py.animate circle{
+    animation: animPy 2s linear forwards;
+}
+@keyframes animPy{
+    100%{
+        stroke-dashoffset: 60;
+    }
+}
+
+/*animateCSS*/
+.CSS circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.CSS.animate circle{
+    animation: animCSS 2s linear forwards;
+}
+@keyframes animCSS{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+/*animateMSOffice*/
+.MSOffice circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.MSOffice.animate circle{
+    animation: animMSOffice 2s linear forwards;
+}
+@keyframes animMSOffice{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+/*animateKotlin*/
+.Kotlin circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.Kotlin.animate circle{
+    animation: animKotlin 2s linear forwards;
+}
+@keyframes animKotlin{
+    100%{
+        stroke-dashoffset: 150;
+    }
+}
+
+
+
+/*animateAndroid-Studio*/
+.Android-Studio circle{
+    stroke-dasharray:  440;
+    stroke-dashoffset: 440;
+}
+.Android-Studio.animate circle{
+    animation: animAndroid-Studio 2s linear forwards;
+}
+@keyframes animAndroid-Studio{
+    100%{
+        stroke-dashoffset: 220;
+    }
+}
+
+
+svg{
+    position: absolute;
+    width: 426px; 
+    height: 426px;
+    top: 0px;
+    left: 0;
 }
 
 
