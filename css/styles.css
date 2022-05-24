@@ -240,7 +240,7 @@ body{
     justify-content: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-image: linear-gradient(250deg, rgb(50, 50, 50), rgb(163, 163, 163));
+    background: rgb(227, 237, 247);
 }
 
 ::-webkit-scrollbar{
@@ -797,9 +797,9 @@ header.scrolled {
  * ## about
 ------------------------------------------------------------------- */
 .about {
-    height: 100vh;
+    height: 81vh;
     width: 100%;
-    background: rgb(255, 255, 255);
+    background: rgb(253, 253, 253);
     position: relative;
     overflow: hidden ;
     padding-bottom: 12vh;
@@ -814,7 +814,7 @@ header.scrolled {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgb(0, 119, 255),rgb(102, 173, 255));
+    background: linear-gradient(to right, rgb(0, 85, 134),rgb(52, 119, 196));
     background-position: center;
     background-size: cover;
 }
@@ -822,25 +822,26 @@ header.scrolled {
 .about .row {
     height: 100%;
     width: 96%;
-    padding-top: 5rem;
+    padding-top: 1rem;
     position: relative;
     left: 8%;
 }
 .profilePic {
     height: auto;
-    width: 80%;
-    border:double 1rem rgb(255, 255, 255);
+    width: 50%;
     border-radius: 50%;
     position: relative;
     top: 10%;
-    left: -8%;
+    left: 5rem;
+    box-shadow: 6px 6px 10px -1px rgb(0, 87, 187),
+                -6px -6px 10px -1px rgb(18, 79, 148);
 }
 
 .about-col h3{
     font-family: var(--font-1);
     font-size: 2.6rem ;
     font-weight: 400;
-    color: #cee8fd;
+    color: rgb(246, 250, 255);
 }
 
 .about-col h3::after{
@@ -848,7 +849,7 @@ header.scrolled {
     display: block;
     width: 13rem;
     height: 5px;
-    background: linear-gradient(150deg, rgba(255, 255, 255, 0.845), rgba(88, 165, 253, 0.845), rgb(0, 142, 174));
+    background: linear-gradient(150deg, rgb(0, 117, 185), rgba(59, 146, 246, 0.845), rgb(3, 112, 137));
     position: relative;
     border-radius: 5px;
     bottom: -15px;
@@ -857,8 +858,7 @@ header.scrolled {
 
 
 .story {
-    padding: 1rem;
-    background: white;
+    color: rgb(227, 237, 247);
     font-size: 1.5rem;
     letter-spacing: 1px;
     line-height: 3rem;
@@ -868,7 +868,7 @@ header.scrolled {
 }
 
 .story p{
-    color:#006aa8 ;
+    color:rgb(227, 237, 247) ;
     font-weight: 500;
 }
 
@@ -895,11 +895,12 @@ header.scrolled {
  * ## skills
 ------------------------------------------------------------------- */
 #skills {
-    height: 100vh;
+    height: 95vh;
     background: rgb(227, 237, 247);
     position: relative;
     overflow: hidden;
     font-family: var(--font-1);
+    
 }
 
 .title {
@@ -907,22 +908,22 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 2rem;
+    top: 1rem;
 }
 
 .title h3{
     font-family: var(--font-1);
-    font-size: 3.6rem;
-    color:#006aa8;
+    font-size: 3rem;
+    color:rgb(0, 89, 140);
     font-weight: 400;
 }
 
 .title h3::after{
     content: "";
     display: block;
-    width: 9rem;
+    width: 24.5rem;
     height: 5px;
-    background: linear-gradient(150deg, rgba(88, 165, 253, 0.845), rgb(0, 142, 174));
+    background: linear-gradient(150deg, rgb(0, 117, 185), rgba(59, 146, 246, 0.845), rgb(3, 112, 137));
     position: relative;
     border-radius: 5px;
     bottom: -15px;
@@ -933,19 +934,45 @@ header.scrolled {
     left: 5rem;
 }
 
-.skills {
+.flexbox{
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+}
+
+.HardSkills {
     text-transform: uppercase;
     display: grid;
-    grid-auto-flow: column;
     gap: 5rem;
-    grid-row-gap: 10rem;
+    grid-row-gap: 7rem;
     grid-template-areas: 
         "Java JS Py Kotlin"
-        "HTML CSS MSOffice Android-Studio";
+        "HTML CSS MSOffice SQL";
     margin: 2rem;
-    color:#006aa8;
+    color:rgb(0, 89, 140);
     font-family: var(--font-1);
 }
+
+@media screen and (orientation: portrait) { 
+    #skills{
+        height: 110%;
+    }
+    .HardSkills {
+        text-transform: uppercase;
+        display: grid;
+        gap: 5rem;
+        grid-row-gap: 10rem;
+        grid-template-areas: 
+        "Java JS"
+        "Py Kotlin"
+        "HTML CSS"
+        "MSOffice SQL";
+        margin: 2rem;
+        color:#006aa8;
+        font-family: var(--font-1);
+    }
+}
+
 
 .Java { grid-area: Java;}
 .JS { grid-area: JS;}
@@ -954,7 +981,7 @@ header.scrolled {
 .HTML { grid-area: HTML;}
 .CSS { grid-area: CSS;}
 .MSOffice { grid-area: MSOffice;}
-.Android-Studio{ grid-area: Android-Studio;}
+.SQL{ grid-area: SQL;}
 
 
 
@@ -1082,7 +1109,7 @@ circle{
 }
 @keyframes animMSOffice{
     100%{
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 80;
     }
 }
 
@@ -1104,17 +1131,17 @@ circle{
 
 
 
-/*animateAndroid-Studio*/
-.Android-Studio circle{
+/*animateSQL*/
+.SQL circle{
     stroke-dasharray:  440;
     stroke-dashoffset: 440;
 }
-.Android-Studio.animate circle{
-    animation: animAndroid-Studio 2s linear forwards;
+.SQL.animate circle{
+    animation: animSQL 2s linear forwards;
 }
-@keyframes animAndroid-Studio{
+@keyframes animSQL{
     100%{
-        stroke-dashoffset: 220;
+        stroke-dashoffset: 190;
     }
 }
 
@@ -1126,6 +1153,246 @@ svg{
     top: 0px;
     left: 0;
 }
+
+
+.SoftSkills {
+    display: flex;
+    font-family: var(--font-1);
+    justify-content: center;
+    background: #005586;
+    width: 21.7rem;
+    margin-right: 4rem;
+}
+
+
+
+.SoftSkills h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgb(227, 237, 247);
+    padding: 1rem;
+    position: relative;
+    top: 0;
+    left: 15%;
+}
+
+.SoftSkills h3::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 21.7rem;
+    bottom: -1.5rem;
+    left: -31%;
+    background: rgb(227, 237, 247);
+}
+
+
+.SoftSkills ul {
+    display: block;
+    padding: 1rem;
+}
+
+.SoftSkills li{
+    text-transform: uppercase;
+    line-height: 3rem;
+    font-weight: 450;
+    color: rgb(227, 237, 247);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Education 
+------------------------------------------------------------------- */
+.education{
+    height: 120vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-1);
+    display: flex;
+    justify-content: center;
+}
+
+.ed-title{
+    display: flex;
+    justify-content: center;
+}
+.ed-title h3{
+    font-size: 3rem;
+    color:rgb(0, 71, 112);
+    font-weight: 400;
+}
+
+.ed-title h3::after{
+    content: "";
+    display: block;
+    width: 14.3rem;
+    height: 5px;
+    background: linear-gradient(150deg, rgb(0, 117, 185), rgba(59, 146, 246, 0.845), rgb(3, 112, 137));
+    position: relative;
+    border-radius: 5px;
+    bottom: -15px;
+}
+
+.education .container {
+    width: 65%;
+}
+
+.schools{
+    position: relative;
+    top: 9rem;
+    display: grid;
+    grid-row-gap: 7rem;
+}
+
+.HS {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 15rem;
+}
+
+.education .name h3{
+    color: #383838;
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+.education .name h4{
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+
+.education .name h4::before{
+    content: "";
+    background: black;
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 76%;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.education .name h4::after{
+    content: "July 2015";
+    display: block;
+    position: relative;
+    left: 84%;
+    top: -1px;
+    font-family: var(--font-mono);
+    color: #6a6a6a;
+}
+
+/*---------------
+*/
+
+.university {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 10rem;
+}
+.education .uni h3{
+    color: #383838;
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+.education .uni h4{
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+
+.education .uni h4::before{
+    content: "";
+    background: black;
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 89%;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.education .uni h4::after{
+    content: "July 2017";
+    display: block;
+    position: relative;
+    left: 95%;
+    top: -1px;
+    font-family: var(--font-mono);
+    color: #6a6a6a;
+}
+
+/*---------------
+*/
+.Year-Up {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 13rem;
+}
+
+.education .YearUp h3{
+    color: #383838;
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+.education .YearUp h4{
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+
+.education .YearUp h4::before{
+    content: "";
+    background: black;
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 75%;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.education .YearUp h4::after{
+    content: "Feb 2022";
+    display: block;
+    position: relative;
+    left: 85%;
+    top: -1px;
+    font-family: var(--font-mono);
+    color: #6a6a6a;
+}
+
+.para{
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+
+
+/* ------------------------------------------------------------------- 
+ * ## Experience
+------------------------------------------------------------------- */
+
+
+
 
 
 

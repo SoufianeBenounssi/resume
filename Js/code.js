@@ -129,10 +129,12 @@ const Kotlin = document.querySelector(".Kotlin");
 const HTML = document.querySelector(".HTML");
 const CSSanim = document.querySelector(".CSS");
 const MSOffice = document.querySelector(".MSOffice");
-const AndroidStudio = document.querySelector(".Android-Studio");
+const SQL = document.querySelector(".SQL");
 
 
-const options = {};
+const options = { 
+    rootMargin: "0px 0px -300px"
+};
 
 const skillsObserver = new IntersectionObserver(
     function(entries, skillsObserver) {
@@ -145,7 +147,7 @@ const skillsObserver = new IntersectionObserver(
                 HTML.classList.add("animate");
                 CSSanim.classList.add("animate");
                 MSOffice.classList.add("animate");
-                AndroidStudio.classList.add("animate");
+                SQL.classList.add("animate");
             }else{
                 Java.classList.remove("animate");
                 JS.classList.remove("animate");
@@ -154,7 +156,7 @@ const skillsObserver = new IntersectionObserver(
                 HTML.classList.remove("animate");
                 CSSanim.classList.remove("animate");
                 MSOffice.classList.remove("animate");
-                AndroidStudio.classList.remove("animate");
+                SQL.classList.remove("animate");
             }
         });
     }, 

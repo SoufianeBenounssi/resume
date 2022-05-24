@@ -240,7 +240,7 @@ body{
     justify-content: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-image: linear-gradient(250deg, rgb(50, 50, 50), rgb(163, 163, 163));
+    background: var(--color-gray-18);
 }
 
 ::-webkit-scrollbar{
@@ -778,7 +778,7 @@ header.scrolled {
  * ## about
 ------------------------------------------------------------------- */
 .about {
-    height: 100vh;
+    height: 81vh;
     width: 100%;
     background: rgb(255, 255, 255);
     position: relative;
@@ -805,25 +805,24 @@ header.scrolled {
 .about .row {
     height: 100%;
     width: 96%;
-    padding-top: 5rem;
+    padding-top: 1rem;
     position: relative;
     left: 8%;
 }
 .profilePic {
     height: auto;
-    width: 80%;
-    border:double 1rem #b82525;
+    width: 50%;
     border-radius: 50%;
     position: relative;
     top: 10%;
-    left: -8%;
+    left: 5rem;
 }
 
 .about-col h3{
     font-family: var(--font-1);
     font-size: 2.6rem ;
     font-weight: 400;
-    color: #b73030;
+    color: #e7e7e7;
 }
 
 .about-col h3::after{
@@ -831,7 +830,7 @@ header.scrolled {
     display: block;
     width: 13rem;
     height: 5px;
-    background: linear-gradient(150deg, rgb(49, 48, 48), rgba(53, 53, 53, 0.845), rgba(53, 53, 53, 0.632), rgba(224, 82, 82, 0.845), rgba(161, 38, 38, 0.845),rgb(161, 21, 21));
+    background: linear-gradient(150deg, rgb(49, 48, 48), rgba(53, 53, 53, 0.845), rgba(156, 23, 23, 0.632),  rgba(161, 38, 38, 0.845),rgb(161, 21, 21));
     position: relative;
     border-radius: 5px;
     bottom: -15px;
@@ -840,8 +839,6 @@ header.scrolled {
 
 
 .story {
-    padding: 1rem;
-    background: linear-gradient(170deg, rgb(49, 48, 48), rgb(53, 53, 53), rgba(133, 31, 31, 0.845), rgba(133, 31, 31, 0.845),rgb(53, 53, 53));
     font-size: 1.5rem;
     letter-spacing: 1px;
     line-height: 3rem;
@@ -877,7 +874,7 @@ header.scrolled {
 ------------------------------------------------------------------- */
 #skills {
     height: 100vh;
-    background: rgb(16, 16, 16);
+    background: var(--color-gray-18);
     position: relative;
     overflow: hidden;
     font-family: var(--font-1);
@@ -888,7 +885,7 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 2rem;
+    top: 1rem;
 }
 
 .title h3{
@@ -901,9 +898,9 @@ header.scrolled {
 .title h3::after{
     content: "";
     display: block;
-    width: 9rem;
+    width: 29rem;
     height: 5px;
-    background: linear-gradient(150deg, rgba(30, 6, 6, 0.845), rgb(253, 2, 2));
+    background: linear-gradient(150deg, rgb(49, 48, 48), rgba(53, 53, 53, 0.845), rgba(156, 23, 23, 0.632),  rgba(161, 38, 38, 0.845),rgb(161, 21, 21));
     position: relative;
     border-radius: 5px;
     bottom: -15px;
@@ -914,7 +911,13 @@ header.scrolled {
     left: 5rem;
 }
 
-.skills {
+.flexbox{
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+}
+
+.HardSkills {
     text-transform: uppercase;
     display: grid;
     grid-auto-flow: column;
@@ -922,10 +925,30 @@ header.scrolled {
     grid-row-gap: 10rem;
     grid-template-areas: 
         "Java JS Py Kotlin"
-        "HTML CSS MSOffice Android-Studio";
+        "HTML CSS MSOffice SQL";
     margin: 2rem;
-    color:#a80000;
+    color:#d7d7d7;
     font-family: var(--font-1);
+}
+
+@media screen and (orientation: portrait) { 
+    #skills{
+        height: 110%;
+    }
+    .HardSkills {
+        text-transform: uppercase;
+        display: grid;
+        gap: 5rem;
+        grid-row-gap: 10rem;
+        grid-template-areas: 
+        "Java JS"
+        "Py Kotlin"
+        "HTML CSS"
+        "MSOffice SQL";
+        margin: 2rem;
+        color:#006aa8;
+        font-family: var(--font-1);
+    }
 }
 
 .Java { grid-area: Java;}
@@ -935,7 +958,7 @@ header.scrolled {
 .HTML { grid-area: HTML;}
 .CSS { grid-area: CSS;}
 .MSOffice { grid-area: MSOffice;}
-.Android-Studio{ grid-area: Android-Studio;}
+.SQL{ grid-area: SQL;}
 
 
 
@@ -950,8 +973,8 @@ header.scrolled {
     width: 260px;
     border-radius: 50%;
     padding: 30.5px;
-    box-shadow: 6px 6px 10px -1px rgba(45, 45, 45, 0.15),
-                -6px -6px 10px -1px rgba(0, 0, 0, 0.7);
+    box-shadow: 6px 6px 10px -1px rgba(25, 25, 25, 0.15),
+                -6px -6px 10px -1px rgba(0, 0, 0, 0.331);
 }
 
 .inner {
@@ -963,7 +986,7 @@ header.scrolled {
     justify-content: center;
     align-items: center;
     box-shadow: inset 4px 4px 6px -1px rgba(12, 12, 12, 0.2),
-                inset -4px -4px 6px -1px rgba(0, 0, 0, 0.7),
+                inset -4px -4px 6px -1px rgba(0, 0, 0, 0.24),
                 -0.5px -0.5px 0px rgb(0, 0, 0),
                 0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
                 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
@@ -1085,17 +1108,17 @@ circle{
 
 
 
-/*animateAndroid-Studio*/
-.Android-Studio circle{
+/*animateSQL*/
+.SQL circle{
     stroke-dasharray:  440;
     stroke-dashoffset: 440;
 }
-.Android-Studio.animate circle{
-    animation: animAndroid-Studio 2s linear forwards;
+.SQL.animate circle{
+    animation: animSQL 2s linear forwards;
 }
-@keyframes animAndroid-Studio{
+@keyframes animSQL{
     100%{
-        stroke-dashoffset: 220;
+        stroke-dashoffset: 190;
     }
 }
 
@@ -1110,6 +1133,246 @@ svg{
 
 
 
+.SoftSkills {
+    display: flex;
+    font-family: var(--font-1);
+    justify-content: center;
+    background: #6e0000ac;
+    width: 21.7rem;
+    margin-right: 4rem;
+}
+
+
+
+.SoftSkills h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgb(247, 227, 227);
+    padding: 1rem;
+    position: relative;
+    top: 0;
+    left: 15%;
+}
+
+.SoftSkills h3::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 21.7rem;
+    bottom: -1.5rem;
+    left: -31%;
+    background: var(--color-gray-18);
+}
+
+
+.SoftSkills ul {
+    display: block;
+    padding: 1rem;
+    position: relative;
+    top: 2rem;
+}
+
+.SoftSkills li{
+    text-transform: uppercase;
+    line-height: 3rem;
+    font-weight: 450;
+    color: rgb(247, 227, 227);
+}
+
+
+
+/* ------------------------------------------------------------------- 
+ * ## Education 
+------------------------------------------------------------------- */
+.education{
+    height: 120vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-1);
+    display: flex;
+    justify-content: center;
+}
+
+.ed-title{
+    display: flex;
+    justify-content: center;
+}
+.ed-title h3{
+    font-size: 3rem;
+    color:rgb(214, 214, 214);
+    font-weight: 400;
+}
+
+.ed-title h3::after{
+    content: "";
+    display: block;
+    width: 14.3rem;
+    height: 5px;
+    background: linear-gradient(150deg, rgb(49, 48, 48), rgba(53, 53, 53, 0.845), rgba(156, 23, 23, 0.632),  rgba(161, 38, 38, 0.845),rgb(161, 21, 21));
+    position: relative;
+    border-radius: 5px;
+    bottom: -15px;
+}
+
+.education .container {
+    width: 65%;
+}
+
+.schools{
+    position: relative;
+    top: 9rem;
+    display: grid;
+    grid-row-gap: 7rem;
+}
+
+.HS {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 15rem;
+}
+
+.education .name h3{
+    color: rgb(214, 214, 214);
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+.education .name h4{
+    color: rgb(191, 191, 191);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+
+.education .name h4::before{
+    content: "";
+    background: rgb(255, 255, 255);
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 76%;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.education .name h4::after{
+    content: "July 2015";
+    display: block;
+    position: relative;
+    left: 84%;
+    top: -1px;
+    font-family: var(--font-mono);
+    color: #6a6a6a;
+}
+
+/*---------------
+*/
+
+.university {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 10rem;
+}
+.education .uni h3{
+    color: rgb(214, 214, 214);
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+.education .uni h4{
+    color: rgb(191, 191, 191);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+
+.education .uni h4::before{
+    content: "";
+    background: rgb(255, 255, 255);
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 89%;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.education .uni h4::after{
+    content: "July 2017";
+    display: block;
+    position: relative;
+    left: 95%;
+    top: -1px;
+    font-family: var(--font-mono);
+    color: #6a6a6a;
+}
+
+/*---------------
+*/
+.Year-Up {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 13rem;
+}
+
+.education .YearUp h3{
+    color: rgb(214, 214, 214);
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+.education .YearUp h4{
+    color: rgb(192, 192, 192);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+
+.education .YearUp h4::before{
+    content: "";
+    background: rgb(255, 255, 255);
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 75%;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.education .YearUp h4::after{
+    content: "Feb 2022";
+    display: block;
+    position: relative;
+    left: 85%;
+    top: -1px;
+    font-family: var(--font-mono);
+    color: #6a6a6a;
+}
+
+.para{
+    color: rgb(214, 214, 214);
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Experience
+------------------------------------------------------------------- */
 
 
 
