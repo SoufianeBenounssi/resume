@@ -365,10 +365,6 @@ header.scrolled {
     transition: all .3s ease-in-out;
 }
 
-.header_nav .current a{
-    color:rgb(255, 157, 30);
-}
-
 .contact a{
     font-family: var(--font-1);
     background-color: #019ef8;
@@ -404,6 +400,10 @@ header.scrolled {
     transition: all .1s ease-in-out;
 }
 
+.header_nav .current a{
+    color:rgb(255, 157, 30);
+}
+
 /* ------------------------------------------------------------------- 
  * ## mobile navigation bar
  ------------------------------------------------------------------- */
@@ -414,7 +414,7 @@ header.scrolled {
     font-size:1.3rem;
     text-transform: uppercase;
     letter-spacing: .4rem;
-    background-color: var(--color-2);
+    background: rgba(0, 106, 168, 0.659);
     color: white;
     width: 4.5rem;
     height:4.5rem;
@@ -481,9 +481,12 @@ header.scrolled {
 }
 
 
+
 /* ------------------------------------------------------------------- 
  * ## hero
- * ------------------------------------------------------------------- */
+ * ------------------------------------------------------------------- 
+*/
+
 
 .hero {
     background-color: var(--color-gray-18);
@@ -1205,7 +1208,7 @@ svg{
  * ## Education 
 ------------------------------------------------------------------- */
 .education{
-    height: 125vh;
+    height: 130vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -1413,7 +1416,7 @@ svg{
  * ## Experience
 ------------------------------------------------------------------- */
 .experience {
-    height: 100vh;
+    height: 107vh;
     background: rgb(196, 203, 212);
     width: 100%;
     position: relative;
@@ -1582,3 +1585,97 @@ svg{
 
 
 
+/* ------------------------------------------------------------------- 
+ * ## Responsive design
+ * ------------------------------------------------------------------- 
+*/
+
+@media screen and (max-Width: 412px){
+    .header {
+        top: 0;
+        background: transparent
+    }
+
+    .header .row{
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .header_nav-wrap, .header_nav {
+        background: rgba(0, 106, 168, 0.659);
+    }
+
+    .header_nav-wrap {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: top center;
+        transform-origin: top center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .header_nav {
+        font-size: var(--text-xs);
+        font-weight: 500;
+        height: auto;
+        width: 100%;
+        padding: var(--vspace-2) 4.8rem var(--vspace-0_25) 4.8rem;
+        transform: translateY(-2rem);
+        -webkit-transform: translateY(-2rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .contact{
+        display: none;
+    }
+
+    .header_nav ul {
+        display: block;
+        text-align: center;
+        margin: 0 0 var(--vspace-1_75) 0;
+        border-top: 1px dotted rgba(255, 255, 255, 0.062) ;
+    }
+
+    .header_nav ul li {
+        display: block;
+        border-top: 1px dotted rgba(255, 255, 255, 0.062);
+        position: relative;
+    }
+
+    .header_nav ul li a {
+        height: auto;
+        padding: var(--vspace-0_25) .4rem var(--vspace-0_25) .4rem;
+        line-height: var(--vspace-1);
+        color: white;
+    }
+
+    .header_menu-toggle {
+        display: block;
+        border-bottom-left-radius: 50% ;
+    }
+
+    .menu-is-open .header_nav-wrap {
+        height: auto;
+        min-height: var(--header-height);
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        transition:-webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+
+    .menu-is-open .header_nav {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transition: all .5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: .5s;
+        -webkit-transition-delay: .5s;
+    }
+}
