@@ -1574,7 +1574,7 @@ svg{
  * ------------------------------------------------------------------- 
 */
 
-@media screen and (max-Width: 412px){
+@media screen and (max-Width: 800px){
     .header {
         top: 0;
         background: transparent;
@@ -1582,7 +1582,6 @@ svg{
     }
 
     
-
     .header .row{
         display: block;
         width: 100%;
