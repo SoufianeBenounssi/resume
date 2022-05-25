@@ -457,7 +457,7 @@ header.scrolled {
 }
 
 .header_menu-toggle.is-clicked .header_menu-icon {
-    background: linear-gradient(150deg, rgba(20, 128, 223, 0.845), rgba(23, 131, 255, 0.845), rgb(129, 252, 244, 0.845),rgb(255, 255, 255, 0.845));
+    background: transparent;
     transition: all .2s;
     -webkit-transition: all .2s;
 }
@@ -1591,6 +1591,12 @@ svg{
 
 @media screen and (max-Width: 412px){
     .header {
+        top: 0;
+        background: transparent;
+        clip-path: none;
+    }
+
+    .menu-is-open .header {
         top: 0;
         background: transparent;
         clip-path: none;
