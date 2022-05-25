@@ -191,7 +191,7 @@ skillsObserver.observe(skills);
 */
 
 const toggleButton = document.querySelector('.header_menu-toggle');
-const headerWrap = document.querySelector('.header_nave-wrap');
+const headerWrap = document.querySelector('.header_nav-wrap');
 const body = document.querySelector("body");
 
 toggleButton.addEventListener('click', function(event){
