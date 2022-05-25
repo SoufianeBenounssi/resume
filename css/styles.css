@@ -172,6 +172,7 @@
 
     /* shades 
      */
+    --color-offwhite : rgb(227, 237, 247);
     --color-black  : #000000;
     --color-gray-19: #0a0a0a;
     --color-gray-18: #141414;
@@ -914,7 +915,7 @@ header.scrolled {
 .title h3{
     font-family: var(--font-1);
     font-size: 3rem;
-    color:rgb(0, 89, 140);
+    color:rgb(0, 56, 89);
     font-weight: 400;
 }
 
@@ -922,11 +923,11 @@ header.scrolled {
     content: "";
     display: block;
     width: 24.5rem;
-    height: 5px;
+    height: 1px;
     background: linear-gradient(150deg, rgb(0, 117, 185), rgba(59, 146, 246, 0.845), rgb(3, 112, 137));
     position: relative;
     border-radius: 5px;
-    bottom: -15px;
+    bottom: -11px;
 }
 .grid{
     position: relative;
@@ -1191,6 +1192,8 @@ svg{
 .SoftSkills ul {
     display: block;
     padding: 1rem;
+    position: relative;
+    top: 1rem;
 }
 
 .SoftSkills li{
@@ -1219,7 +1222,7 @@ svg{
 }
 .ed-title h3{
     font-size: 3rem;
-    color:rgb(0, 71, 112);
+    color:rgb(0, 56, 89);
     font-weight: 400;
 }
 
@@ -1227,11 +1230,11 @@ svg{
     content: "";
     display: block;
     width: 14.3rem;
-    height: 5px;
+    height: 1px;
     background: linear-gradient(150deg, rgb(0, 117, 185), rgba(59, 146, 246, 0.845), rgb(3, 112, 137));
     position: relative;
     border-radius: 5px;
-    bottom: -15px;
+    bottom: -11px;
 }
 
 .education .container {
@@ -1240,7 +1243,7 @@ svg{
 
 .schools{
     position: relative;
-    top: 9rem;
+    top: 7rem;
     display: grid;
     grid-row-gap: 7rem;
 }
@@ -1296,8 +1299,19 @@ svg{
     grid-auto-flow: column;
     column-gap: 10rem;
 }
+
+.university::after{
+    content: "";
+    display: block;
+    height: .5px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.192);
+    position: absolute;
+    top: 16rem;
+    left: 0;
+}
 .education .uni h3{
-    color: #383838;
+    color: rgb(56, 56, 56);
     font-size: 2.3rem;
     font-weight: 400;
     line-height: .1rem;
@@ -1339,6 +1353,17 @@ svg{
     display:grid;
     grid-auto-flow: column;
     column-gap: 13rem;
+}
+
+.Year-Up::after{
+    content: "";
+    display: block;
+    height: .5px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.192);
+    position: absolute;
+    top: 38rem;
+    left: 0;
 }
 
 .education .YearUp h3{
@@ -1386,10 +1411,171 @@ svg{
 
 
 
-
 /* ------------------------------------------------------------------- 
  * ## Experience
 ------------------------------------------------------------------- */
+.experience {
+    height: 100vh;
+    background: rgb(196, 203, 212);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-1);
+    display: flex;
+    justify-content: center;
+}
+
+.e-title{
+    display: flex;
+    justify-content: center;
+}
+
+.e-title h3{
+    font-size: 3rem;
+    color:rgb(44, 44, 44);
+    font-weight: 400;
+}
+
+.e-title h3::after{
+    content: "";
+    display: block;
+    width: 16rem;
+    height: 1px;
+    background:rgb(44, 44, 44);
+    position: relative;
+    border-radius: 5px;
+    bottom: -11px;
+}
+
+.experience .container {
+    position: relative;
+    top: 3rem;
+    width: 65%;
+}
+
+.experiences {
+    position: relative;
+    top: 7rem;
+    display: grid;
+    grid-row-gap: 7rem;
+}
+
+.MS {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 10rem;
+}
+
+.experience .name h3{
+    color: rgb(45, 45, 45);
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+
+.experience .name h4{
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+ /*
+.experience .name h4::before{
+    content: "";
+    background: rgb(0, 0, 0);
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 2%;
+    top: 1.8rem;
+    border-radius: 5px;
+}*/
+
+.experience .name h4::after{
+    content: "AUG 2021 => Feb 2022";
+    display: block;
+    position: relative;
+    font-size: 1rem;
+    left: 0;
+    top: 1.3rem;
+    font-family: var(--font-mono);
+    color: #606060;
+}
+
+/*---------------
+*/
+
+.ubert {
+    display:grid;
+    grid-auto-flow: column;
+    column-gap: 8rem;
+}
+
+.ubert::after{
+    content: "";
+    display: block;
+    height: .5px;
+    width: 100%;
+    background: rgba(120, 120, 120, 0.192);
+    position: absolute;
+    top: 22.3rem;
+    left: 0;
+}
+
+.experience .uber h3{
+    color: rgb(45, 45, 45);
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: .1rem;
+}
+
+.experience .uber h4{
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: .1rem;
+    font-family: var(--font-mono);
+    position: relative;
+    left: 5px;
+}
+
+.experience .uber h4::before{
+    content: "";
+    background: rgb(0, 0, 0);
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: relative;
+    left: 29.6%;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.experience .uber h4::after{
+    content: "OCT 2018 => Present";
+    display: block;
+    position: relative;
+    font-size: 1rem;
+    left: 39%;
+    top: -1px;
+    font-family: var(--font-mono);
+    color: #606060;
+}
+
+
+
+.description{
+    color: rgb(44, 44, 44);
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    position: relative;
+    top: 1.3rem;
+}
 
 
 
