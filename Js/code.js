@@ -71,6 +71,12 @@ function darkSwitch(){
 
 /* *split the code here* */
 
+
+/* -------------------------------------------------------
+** Parallax effect function
+**-------------------------------------------------------- 
+*/
+
 window.addEventListener('scroll', function(){
     var value = window.scrollY;
 
@@ -80,7 +86,10 @@ window.addEventListener('scroll', function(){
 
 
 
-
+/* -------------------------------------------------------
+** Moving header function
+**-------------------------------------------------------- 
+*/
 
 const hdr = document.querySelector('header');
 const hero = document.querySelector('.hero');
@@ -110,6 +119,11 @@ window.addEventListener('scroll', function (){
 });
 
 
+/* -------------------------------------------------------
+** darkMode function
+**-------------------------------------------------------- 
+*/
+
 function darkSwitch(){
     var mode = document.getElementsByTagName("link")[0];
 
@@ -120,7 +134,12 @@ function darkSwitch(){
     };
 }
 
-/* Skills progress bar animation */
+
+/* -------------------------------------------------------
+** Skills progress bar animation
+**-------------------------------------------------------- 
+*/
+
 const skills = document.getElementById("skills");
 const Java = document.querySelector(".Java");
 const JS = document.querySelector(".JS");
@@ -164,3 +183,46 @@ const skillsObserver = new IntersectionObserver(
 );
 skillsObserver.observe(skills);
 /* Skills progress bar animation end */
+
+
+/* -------------------------------------------------------
+** mobile header toggle function
+**-------------------------------------------------------- 
+*/
+
+const toggleButton = document.querySelector('.header_menu-toggle');
+const headerWrap = document.querySelector('.header_nave-wrap');
+const body = document.querySelector("body");
+
+toggleButton.addEventListener('click', function(event){
+    event.preventDefault();
+    toggleButton.classList.toggle('is-clicked');
+    body.classList.toggle('menu-is-open');
+});
+
+headerWrap.querySelectorAll('.header_nav a').forEach(function(link){
+    link.addEventListener('click', function(evt){
+
+        //800px and bellow
+        if (window.matchMedia('(max-width: 800px)').matches){
+            toggleButton.classList.toggle('is-clicked');
+            body.classList.toggle('menu-is-open');
+        }
+    });
+});
+
+window.addEventListener('resize', function(){
+
+    //800px and above
+    if(window.matchMedia('(min-width: 801px)').matches) {
+        if(body.classList.contains("menu-is-open")) body.classList.remove("menu-is-open");
+        if(toggleButton.classList.contains('is-clicked')) toggleButton.classList.remove('is-clicked');
+    }
+});
+
+
+
+/* -------------------------------------------------------
+** section tracking function
+**-------------------------------------------------------- 
+*/
