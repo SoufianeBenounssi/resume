@@ -427,7 +427,7 @@ header.scrolled {
     font-size:1.3rem;
     text-transform: uppercase;
     letter-spacing: .4rem;
-    background-color: var(--color-2);
+    background: rgb(104, 0, 0);
     color: white;
     width: 4.5rem;
     height:4.5rem;
