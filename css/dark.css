@@ -1659,3 +1659,201 @@ svg{
         display: block;
     }
 }
+
+@media screen and (max-width: 450px){
+    
+    /*----------------------------------------------------------
+    ** Hero
+    **----------------------------------------------------------*/
+
+    .hero_content{
+        top: 0;
+        width: 100%;
+    }
+
+    .hero_content h1{
+        font-family: var(--font-1);
+        font-weight: 600;
+        letter-spacing: -.04em;
+        top: 0rem;
+        width: 60%;
+    }
+
+    .hero_content h3{
+        font-family: var(--font-mono);
+        font-weight: 400;
+        line-height: 1.5rem;
+        width:100%;
+        margin-top: var(--vspace-0_5);
+        padding-bottom: var(--vspace-1);
+        color: rgb(237, 236, 236);
+        position: relative;
+        top: 7rem;
+        left: 4.7%;
+    }
+
+    .hero_content-about {
+        width: 170%;
+    }
+    
+    .hero_content h3::after{
+        display: none;
+    }
+
+    
+    /*----------------------------------------------------------
+    ** about
+    **----------------------------------------------------------*/
+
+
+    .about {
+        height: 200vh;
+        width: 100%;
+    }
+
+
+    .profilePic {
+        display: none;
+    }
+
+    .about-col h3{
+        font-family: var(--font-1);
+        font-size: 2rem ;
+        font-weight: 400;
+        position: relative;
+        left: 0;
+    }
+
+    .about-col h3::after{
+        content: "";
+        display: block;
+        width: 9.3rem;
+        height: 1px;
+        position: relative;
+        border-radius: 5px;
+        bottom: -3px;
+    }
+
+    .story {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        line-height: 2rem;
+        text-align: center;
+        width: 145%;
+        font-family: var(--font-mono);
+        position: relative;
+        left: -8rem;
+    }
+
+    
+    /*----------------------------------------------------------
+    ** skills
+    **----------------------------------------------------------*/
+
+    #skills {
+        height: 250vh;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .title h3{
+        font-family: var(--font-1);
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .title h3::after{
+        content: "";
+        display: block;
+        width: 16.2rem;
+        height: 1px;
+        position: relative;
+        border-radius: 5px;
+        bottom: -15px;
+    }
+
+    svg{
+        position: absolute;
+        width: 246.1px; 
+        height: 246.1px;
+        top: -.65px;
+        left: -.575px;
+    }
+
+    .skill {
+        height: 250px;
+        position: relative;
+    }
+    
+    
+    .outer {
+        height: 149.5px;
+        width: 149.5px;
+        border-radius: 50%;
+        padding: 17.5375px;
+    }
+    
+    .inner {
+        position: relative;
+        height: 115px;
+        width: 115px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+                    
+    }
+
+    circle{
+        fill: none;
+        /*stroke: transparent;*/
+        stroke-width: 18px;
+    }
+
+    .grid{
+        top: 3rem;
+        left: 0;
+    }
+
+    .flexbox{
+        display: grid;
+        gap: 0rem;
+        grid-auto-flow: row;
+        justify-content: center;
+    }
+
+    .HardSkills {
+        text-transform: uppercase;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 3rem;
+        grid-row-gap: 0;
+        grid-template-areas: 
+            "Java JS"
+            "Py Kotlin"
+            "HTML CSS"
+            "MSOffice SQL";
+        font-size: .8rem;
+        margin: 2rem;
+        font-family: var(--font-1);
+    }
+
+    .SoftSkills {
+        display: flex;
+        font-family: var(--font-1);
+        justify-content: center;
+        width: 21.7rem;
+        margin-right: 4rem;
+        position: relative;
+        left: 7.5%;
+    }
+
+
+
+
+}
