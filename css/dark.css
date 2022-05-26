@@ -1718,7 +1718,7 @@ svg{
 
     .about-col h3{
         font-family: var(--font-1);
-        font-size: 2rem ;
+        font-size: 1.4rem ;
         font-weight: 400;
         position: relative;
         left: 0;
@@ -1727,21 +1727,23 @@ svg{
     .about-col h3::after{
         content: "";
         display: block;
-        width: 9.3rem;
+        width: 6.5rem;
         height: 1px;
         position: relative;
+        background-color: #f7f7f7;
         border-radius: 5px;
         bottom: -3px;
     }
 
     .story {
-        font-size: 1rem;
-        letter-spacing: 1px;
+        font-size: .9rem;
+        letter-spacing: 0.2px;
         line-height: 2rem;
         text-align: center;
         width: 145%;
         font-family: var(--font-mono);
         position: relative;
+        top: 1.5rem;
         left: -8rem;
     }
 
@@ -1759,18 +1761,19 @@ svg{
         align-items: center;
         justify-content: center;
         position: relative;
+        top: 2rem;
     }
 
     .title h3{
         font-family: var(--font-1);
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: 400;
     }
 
     .title h3::after{
         content: "";
         display: block;
-        width: 16.2rem;
+        width: 11.3rem;
         height: 1px;
         position: relative;
         border-radius: 5px;
@@ -1816,7 +1819,7 @@ svg{
     }
 
     .grid{
-        top: 3rem;
+        top: 3.5rem;
         left: 0;
     }
 
@@ -1852,8 +1855,5 @@ svg{
         position: relative;
         left: 7.5%;
     }
-
-
-
 
 }
