@@ -969,7 +969,7 @@ header.scrolled {
         "HTML CSS"
         "MSOffice SQL";
         margin: 2rem;
-        color:#006aa8;
+        color:#004b77;
         font-family: var(--font-1);
     }
 }
@@ -1739,7 +1739,7 @@ svg{
 
 
     .about {
-        height: 180vh;
+        height: 200vh;
         width: 100%;
     }
 
@@ -1786,7 +1786,7 @@ svg{
     **----------------------------------------------------------*/
 
     #skills {
-        height: 120vh;
+        height: 250vh;
     }
 
     .title {
@@ -1856,13 +1856,13 @@ svg{
     }
 
     .grid{
-        top: 0rem;
+        top: 3rem;
         left: .7rem;
     }
 
     .flexbox{
         display: grid;
-        gap: 1rem;
+        gap: 0rem;
         grid-auto-flow: row;
     }
 
@@ -1877,8 +1877,19 @@ svg{
             "Py Kotlin"
             "HTML CSS"
             "MSOffice SQL";
+        font-size: .8rem;
         margin: 2rem;
         font-family: var(--font-1);
+    }
+
+    .SoftSkills {
+        display: flex;
+        font-family: var(--font-1);
+        justify-content: center;
+        width: 21.7rem;
+        margin-right: 4rem;
+        position: relative;
+        left: 5.4%;
     }
 
 
