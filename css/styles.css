@@ -1640,13 +1640,11 @@ svg{
     .header_nav ul {
         display: block;
         text-align: center;
-        margin: 0 0 var(--vspace-1_75) 0;
-        border-top: 1px dotted rgba(255, 255, 255, 0.062) ;
     }
 
     .header_nav ul li {
         display: block;
-        border-top: 1px dotted rgba(255, 255, 255, 0.062);
+        border-top: 1px dotted rgba(255, 255, 255, 0.226);
         position: relative;
     }
 
@@ -1695,6 +1693,11 @@ svg{
 }
 
 @media screen and (max-width: 450px){
+    
+    /*----------------------------------------------------------
+    ** Hero
+    **----------------------------------------------------------*/
+
     .hero_content{
         top: 0;
         width: 100%;
@@ -1726,5 +1729,58 @@ svg{
     }
     
     .hero_content h3::after{
-        display: none;}
+        display: none;
+    }
+
+    
+    /*----------------------------------------------------------
+    ** about
+    **----------------------------------------------------------*/
+
+
+    .about {
+        height: 160vh;
+        width: 100%;
+    }
+
+
+    .profilePic {
+        display: none;
+    }
+
+    .about-col h3{
+        font-family: var(--font-1);
+        font-size: 2rem ;
+        font-weight: 400;
+        color: #e7e7e7;
+        position: relative;
+        left: 0;
+    }
+
+    .about-col h3::after{
+        content: "";
+        display: block;
+        width: 9.3rem;
+        height: 1px;
+        background: linear-gradient(150deg, rgb(0, 117, 185), rgba(59, 146, 246, 0.845), rgb(3, 112, 137));
+        position: relative;
+        border-radius: 5px;
+        bottom: -3px;
+    }
+
+    .story {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        line-height: 2rem;
+        text-align: center;
+        width: 145%;
+        color: white;
+        font-family: var(--font-mono);
+        position: relative;
+        left: -8rem;
+    }
+
+
 }
+
+
