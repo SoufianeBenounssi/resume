@@ -1814,10 +1814,10 @@ svg{
 
     svg{
         position: absolute;
-        width: 214px; 
-        height: 214px;
-        top: -.5px;
-        left: -.5px;
+        width: 246.1px; 
+        height: 246.1px;
+        top: -.65px;
+        left: -.575px;
     }
 
     .skill {
@@ -1827,18 +1827,18 @@ svg{
     
     
     .outer {
-        height: 130px;
-        width: 130px;
+        height: 149.5px;
+        width: 149.5px;
         border-radius: 50%;
-        padding: 15.25px;
+        padding: 17.5375px;
         box-shadow: 6px 6px 10px -1px rgba(25, 25, 25, 0.15),
                     -6px -6px 10px -1px rgba(0, 0, 0, 0.331);
     }
     
     .inner {
         position: relative;
-        height: 100px;
-        width: 100px;
+        height: 115px;
+        width: 115px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -1857,13 +1857,14 @@ svg{
 
     .grid{
         top: 3rem;
-        left: .7rem;
+        left: 0;
     }
 
     .flexbox{
         display: grid;
         gap: 0rem;
         grid-auto-flow: row;
+        justify-content: center;
     }
 
     .HardSkills {
@@ -1889,7 +1890,7 @@ svg{
         width: 21.7rem;
         margin-right: 4rem;
         position: relative;
-        left: 5.4%;
+        left: 7.5%;
     }
 
 
