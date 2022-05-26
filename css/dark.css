@@ -931,25 +931,7 @@ header.scrolled {
     font-family: var(--font-1);
 }
 
-@media screen and (orientation: portrait) { 
-    #skills{
-        height: 110%;
-    }
-    .HardSkills {
-        text-transform: uppercase;
-        display: grid;
-        gap: 5rem;
-        grid-row-gap: 10rem;
-        grid-template-areas: 
-        "Java JS"
-        "Py Kotlin"
-        "HTML CSS"
-        "MSOffice SQL";
-        margin: 2rem;
-        color:#006aa8;
-        font-family: var(--font-1);
-    }
-}
+
 
 .Java { grid-area: Java;}
 .JS { grid-area: JS;}
@@ -992,7 +974,6 @@ header.scrolled {
                 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
                 
 }
-
 
 
 circle{

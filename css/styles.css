@@ -1780,6 +1780,109 @@ svg{
         left: -8rem;
     }
 
+    
+    /*----------------------------------------------------------
+    ** skills
+    **----------------------------------------------------------*/
+
+    #skills {
+        height: 120vh;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .title h3{
+        font-family: var(--font-1);
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .title h3::after{
+        content: "";
+        display: block;
+        width: 16.2rem;
+        height: 1px;
+        position: relative;
+        border-radius: 5px;
+        bottom: -15px;
+    }
+
+    svg{
+        position: absolute;
+        width: 214px; 
+        height: 214px;
+        top: -.5px;
+        left: -.5px;
+    }
+
+    .skill {
+        height: 250px;
+        position: relative;
+    }
+    
+    
+    .outer {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        padding: 15.25px;
+        box-shadow: 6px 6px 10px -1px rgba(25, 25, 25, 0.15),
+                    -6px -6px 10px -1px rgba(0, 0, 0, 0.331);
+    }
+    
+    .inner {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 4px 4px 6px -1px rgba(12, 12, 12, 0.2),
+                    inset -4px -4px 6px -1px rgba(0, 0, 0, 0.24),
+                    -0.5px -0.5px 0px rgb(0, 0, 0),;
+                    
+    }
+
+    circle{
+        fill: none;
+        /*stroke: transparent;*/
+        stroke-width: 18px;
+    }
+
+    .grid{
+        top: 0rem;
+        left: .7rem;
+    }
+
+    .flexbox{
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: row;
+    }
+
+    .HardSkills {
+        text-transform: uppercase;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 3rem;
+        grid-row-gap: 0;
+        grid-template-areas: 
+            "Java JS"
+            "Py Kotlin"
+            "HTML CSS"
+            "MSOffice SQL";
+        margin: 2rem;
+        font-family: var(--font-1);
+    }
+
+
+
 
 }
 
