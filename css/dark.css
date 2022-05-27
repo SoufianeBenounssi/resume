@@ -1967,7 +1967,7 @@ svg{
         width: 5px;
         display: block;
         position: relative;
-        left: 78.3%;
+        left: 70.3%;
         top: 5px;
         border-radius: 5px;
     }
@@ -1976,7 +1976,7 @@ svg{
         content: "July 2017";
         display: block;
         position: relative;
-        left: 84%;
+        left: 77%;
         top: -1px;
         font-family: var(--font-mono);
     }
@@ -2017,6 +2017,127 @@ svg{
         font-size: 1.1rem;
         font-weight: 400;
     }
+
+
+    /* ------------------------------------------------------------------- 
+    * ## Experience
+    ------------------------------------------------------------------- */
+
+    .experience {
+        height: 200vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .e-title{
+        display: flex;
+        justify-content: center;
+    }
+
+    .e-title h3{
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+    .e-title h3::after{
+        width: 7.38rem;
+        bottom: -3.5px;
+    }
+
+    .experience .container {
+        width: 80%;
+    }
+
+    .experiences {
+        position: relative;
+        top: 7rem;
+        display: grid;
+        grid-row-gap: 7rem;
+        grid-auto-flow: row;
+    }
+
+    .MS {
+        display:grid;
+        grid-auto-flow: row;
+    }
+
+    .experience .name h3{
+        font-size: 1.6rem;
+    }
+
+    .experience .name h4{
+        font-size: 1rem;
+        font-weight: 300;
+        position: relative;
+        left: 0px;
+    }
+
+
+    .experience .name h4::after{
+        content: "AUG 2021 => Feb 2022";
+        display: block;
+        position: relative;
+        font-size: 1rem;
+        left: 0;
+        top: 1.3rem;
+    }
+
+    /*---------------
+    */
+
+    .ubert {
+        display:grid;
+        grid-auto-flow: row;
+        column-gap: 8rem;
+    }
+
+    .ubert::after{
+        display: none;
+    }
+
+    .experience .uber h3{
+        font-size: 1.6rem;
+    }
+
+    .experience .uber h4{
+        font-size: 1rem;
+        position: relative;
+        left: 2px;
+    }
+
+    .experience .uber h4::before{
+        content: "";
+        height: 5px;
+        width: 5px;
+        display: block;
+        position: relative;
+        left: 31.6%;
+        top: 4.6px;
+        border-radius: 5px;
+    }
+
+    .experience .uber h4::after{
+        content: "OCT 2018 => Present";
+        display: block;
+        position: relative;
+        font-size: 1rem;
+        left: 39%;
+        top: -1px;
+        font-family: var(--font-mono);
+        color: #606060;
+    }
+
+
+
+    .description{
+        line-height: 2rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
 
 
 
