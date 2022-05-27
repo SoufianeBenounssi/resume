@@ -1862,7 +1862,6 @@ svg{
     **----------------------------------------------------------*/
 
     
-
     .education{
         height: 200vh;
         width: 100%;
@@ -1926,7 +1925,7 @@ svg{
         width: 5px;
         display: block;
         position: relative;
-        left: 53%;
+        left: 63.6%;
         top: 5px;
         border-radius: 5px;
     }
@@ -1935,7 +1934,7 @@ svg{
         content: "July 2015";
         display: block;
         position: relative;
-        left: 59%;
+        left: 70.8%;
         top: -1px;
         font-family: var(--font-mono);
     }
@@ -2003,13 +2002,13 @@ svg{
     }
 
     .education .YearUp h4::before{
-        left: 58%;
+        left: 69.6%;
         top: 5px;
     }
 
     .education .YearUp h4::after{
         content: "Feb 2022";
-        left: 65%;
+        left: 78%;
         top: -1px;
     }
 
@@ -2018,6 +2017,8 @@ svg{
         font-size: 1.1rem;
         font-weight: 400;
     }
+
+
 
 
 }
