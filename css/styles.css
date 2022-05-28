@@ -798,7 +798,7 @@ header.scrolled {
  * ## about
 ------------------------------------------------------------------- */
 .about {
-    height: 81vh;
+    height: 61vh;
     width: 100%;
     background: rgb(253, 253, 253);
     position: relative;
@@ -827,13 +827,14 @@ header.scrolled {
     position: relative;
     left: 8%;
 }
+
 .profilePic {
     height: auto;
-    width: 50%;
+    width: 40%;
     border-radius: 50%;
     position: relative;
-    top: 10%;
-    left: 5rem;
+    top: 27%;
+    left: 30%;
     box-shadow: 6px 6px 10px -1px rgb(0, 87, 187),
                 -6px -6px 10px -1px rgb(18, 79, 148);
 }
@@ -849,11 +850,11 @@ header.scrolled {
     content: "";
     display: block;
     width: 13rem;
-    height: 5px;
+    height: 1px;
     background: linear-gradient(150deg, rgb(0, 117, 185), rgba(59, 146, 246, 0.845), rgb(3, 112, 137));
     position: relative;
     border-radius: 5px;
-    bottom: -15px;
+    bottom: -3px;
 }
 
 
@@ -1739,7 +1740,7 @@ svg{
 
 
     .about {
-        height: 170vh;
+        height: 120vh;
         width: 100%;
     }
 

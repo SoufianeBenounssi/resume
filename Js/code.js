@@ -142,7 +142,7 @@ function darkSwitch(){
 const skills = document.getElementById("skills");
 const skill = document.querySelectorAll(".HardSkills .skill");
 
-if(window.matchMedia('(min-width: 1904px)').matches){
+if(window.matchMedia('(min-width: 1903px)').matches){
     const options = { 
         rootMargin: "0px 0px -300px"
     };
