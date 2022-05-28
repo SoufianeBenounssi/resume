@@ -139,49 +139,71 @@ function darkSwitch(){
 ** Skills progress bar animation
 **-------------------------------------------------------- 
 */
+const skill = document.querySelectorAll(".HardSkills .skill");
 
-const skills = document.getElementById("skills");
-const Java = document.querySelector(".Java");
-const JS = document.querySelector(".JS");
-const Py = document.querySelector(".Py");
-const Kotlin = document.querySelector(".Kotlin");
-const HTML = document.querySelector(".HTML");
-const CSSanim = document.querySelector(".CSS");
-const MSOffice = document.querySelector(".MSOffice");
-const SQL = document.querySelector(".SQL");
+if(window.matchMedia('(min-width: 1904px)').matches){
+    const options = { 
+        rootMargin: "0px 0px -300px"
+    };
+
+    const skillsObserver = new IntersectionObserver(
+        function(entries, skillsObserver) {
+            entries.forEach( entry => {
 
 
-const options = { 
-    rootMargin: "0px 0px -300px"
-};
+                
+                if(entry.isIntersecting){
+                    skill.forEach(function(div){
+                        div.classList.add("animate");
+                    }
+                    )
+                }else{
+                    skill.forEach(function(div){
+                        div.classList.remove("animate");
+                    }
+                    )
+                }
 
-const skillsObserver = new IntersectionObserver(
-    function(entries, skillsObserver) {
-        entries.forEach( entry => {
-            if(entry.isIntersecting){
-                Java.classList.add("animate");
-                JS.classList.add("animate");
-                Py.classList.add("animate");
-                Kotlin.classList.add("animate");
-                HTML.classList.add("animate");
-                CSSanim.classList.add("animate");
-                MSOffice.classList.add("animate");
-                SQL.classList.add("animate");
-            }else{
-                Java.classList.remove("animate");
-                JS.classList.remove("animate");
-                Py.classList.remove("animate");
-                Kotlin.classList.remove("animate");
-                HTML.classList.remove("animate");
-                CSSanim.classList.remove("animate");
-                MSOffice.classList.remove("animate");
-                SQL.classList.remove("animate");
-            }
-        });
-    }, 
-    options
-);
-skillsObserver.observe(skills);
+
+            });
+        }, 
+        options
+    );
+    skillsObserver.observe(skills);
+}
+
+if(window.matchMedia('(min-width: 412px)').matches){
+    const options = { 
+        rootMargin: "0px 0px -200px"
+    };
+
+    const skillsObserver = new IntersectionObserver(
+        function(entries, skillsObserver) {
+            entries.forEach( entry => {
+
+
+                
+                if(entry.isIntersecting){
+                    skill.forEach(function(div){
+                        div.classList.add("animate");
+                    }
+                    )
+                }else{
+                    skill.forEach(function(div){
+                        div.classList.remove("animate");
+                    }
+                    )
+                }
+
+
+            });
+        }, 
+        options
+    );
+    skillsObserver.observe(skills);
+}
+
+
 /* Skills progress bar animation end */
 
 
