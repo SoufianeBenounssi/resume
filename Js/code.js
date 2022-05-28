@@ -169,7 +169,7 @@ if(window.matchMedia('(min-width: 1904px)').matches){
     skillsObserver.observe(skills);
 }
 
-if(window.matchMedia('(min-width: 412px)').matches){
+if(window.matchMedia('(max-width: 412px)').matches){
     const options = { 
         rootMargin: "0px 0px -200px"
     };
