@@ -139,6 +139,7 @@ function darkSwitch(){
 ** Skills progress bar animation
 **-------------------------------------------------------- 
 */
+const skills = document.getElementById("skills");
 const skill = document.querySelectorAll(".HardSkills .skill");
 
 if(window.matchMedia('(min-width: 1904px)').matches){
@@ -150,8 +151,6 @@ if(window.matchMedia('(min-width: 1904px)').matches){
         function(entries, skillsObserver) {
             entries.forEach( entry => {
 
-
-                
                 if(entry.isIntersecting){
                     skill.forEach(function(div){
                         div.classList.add("animate");
@@ -163,8 +162,6 @@ if(window.matchMedia('(min-width: 1904px)').matches){
                     }
                     )
                 }
-
-
             });
         }, 
         options
