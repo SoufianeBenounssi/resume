@@ -364,7 +364,7 @@ header.scrolled {
     transition: all .3s ease-in-out;
 }
 
-.contact a{
+.contactButton a{
     font-family: var(--font-1);
     background-color: #019ef8;
     font-size: .95rem;
@@ -381,7 +381,7 @@ header.scrolled {
     transition: all .3s ease-in-out;
 }
 
-.contact a:hover {
+.contactButton a:hover {
     font-family: var(--font-1);
     background-color: #ffffff;
     font-size: .95rem;
@@ -1417,7 +1417,7 @@ svg{
 ------------------------------------------------------------------- */
 .experience {
     height: 107vh;
-    background: rgb(196, 203, 212);
+    background: hsl(210, 86%, 93%);
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -1523,7 +1523,7 @@ svg{
     width: 100%;
     background: rgba(120, 120, 120, 0.192);
     position: absolute;
-    top: 22.3rem;
+    top: 24.3rem;
     left: 0;
 }
 
@@ -1576,6 +1576,121 @@ svg{
     font-weight: 300;
     position: relative;
     top: 1.3rem;
+}
+
+
+
+/* ------------------------------------------------------------------- 
+ * ## footer
+ * ------------------------------------------------------------------- 
+*/
+
+footer {
+    height: 80vh;
+    position: relative;
+    background-image: linear-gradient(to right, rgb(0, 85, 134),rgb(52, 119, 196));
+    overflow: hidden;
+    font-family: var(--font-1);
+    display: flex;
+    justify-content: center;
+}
+
+.contact{
+    width: 80%;
+}
+
+
+
+
+.f-title{
+    display: flex;
+    justify-content: center;
+}
+
+.f-title h3{
+    font-size: 3rem;
+    color:rgb(210, 210, 210);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.f-title h3::after{
+    content: "";
+    display: block;
+    width: 19.7rem;
+    height: 1px;
+    background:rgb(176, 176, 176);
+    position: relative;
+    border-radius: 5px;
+    bottom: -5px;
+}
+
+.social{
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 5rem;
+}
+
+.social .parag{
+    width: 100%;
+    font-size: 4rem;
+    line-height: 5rem;
+    color: white;
+}
+
+.links {
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    top: 2rem;
+}
+
+.email h4 {
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+}
+
+.email p{
+    position: relative;
+    top: -1.5rem;
+}
+
+.email a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+.socials ul{
+    list-style: none;
+    display: flex;
+    column-gap: 3rem;
+    justify-content: left;
+    padding-left: 1px;
+}
+
+.socials ul::before{
+    content: "";
+    display: block;
+    height:  .4px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 19rem;
+}
+
+
+
+
+
+
+footer svg{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    color: white;
 }
 
 
@@ -1634,7 +1749,7 @@ svg{
         opacity: 0;
         visibility: hidden;
     }
-    .contact{
+    .contactButton{
         display: none;
     }
 
