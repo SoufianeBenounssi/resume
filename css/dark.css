@@ -2254,6 +2254,7 @@ svg{
         font-weight: 400;
     }
 
+
     /* ------------------------------------------------------------------- 
     * ## footer
     * ------------------------------------------------------------------- 
@@ -2299,8 +2300,8 @@ svg{
     }
 
     .social .parag{
-        width: 80%;
-        font-size: 2rem;
+        width: 100%;
+        font-size: 1.6rem;
         line-height: 3rem;
         color: white;
     }
@@ -2313,7 +2314,7 @@ svg{
     }
 
     .email h4 {
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: white;
         font-weight: 400;
     }
@@ -2324,7 +2325,7 @@ svg{
     }
 
     .email a {
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: white;
         text-decoration: none;
     }
@@ -2345,7 +2346,7 @@ svg{
         width: 100%;
         background-color: white;
         position: absolute;
-        top: 19rem;
+        top: 13rem;
     }
 
 
