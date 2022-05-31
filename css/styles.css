@@ -370,6 +370,7 @@ header.scrolled {
     font-size: .95rem;
     display: block;
     line-height: 3.8rem;
+    width: 100%;
     padding: 0 .8rem;
     border-radius: 50px;
     color: rgb(255, 255, 255);
