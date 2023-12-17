@@ -245,7 +245,7 @@ body{
 }
 
 ::-webkit-scrollbar{
-    display:none;
+    display: none;
 }
 
 
@@ -272,7 +272,19 @@ header.offset{
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
     transition: all .7s ease-in-out;
-    -webkit-transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out; 
+    opacity: 0;
+    visibility: hidden;
+}
+
+header.sticky{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 700ms ease-in-out;
+    -webkit-transition: 700ms ease-in-out;
 }
 
 header.scrolled {
@@ -1683,10 +1695,6 @@ footer {
 }
 
 
-
-
-
-
 footer svg{
     position: relative;
     height: 20px;
@@ -1785,7 +1793,8 @@ footer svg{
         -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
         transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
         transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-        transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                    -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
 
 
@@ -1809,12 +1818,11 @@ footer svg{
     }
 }
 
-@media screen and (max-width: 450px){
-    
     /*----------------------------------------------------------
     ** Hero
     **----------------------------------------------------------*/
 
+@media screen and (max-width: 450px){
     .hero_content{
         top: 0;
         width: 100%;

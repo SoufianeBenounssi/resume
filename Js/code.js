@@ -72,6 +72,13 @@ function darkSwitch(){
 /* *split the code here* */
 
 
+
+
+
+
+
+
+
 /* -------------------------------------------------------
 ** Parallax effect function
 **-------------------------------------------------------- 
@@ -96,7 +103,7 @@ const hero = document.querySelector('.hero');
 let triggerHeight;
 
 setTimeout(function(){
-    triggerHeight = hero.offsetHeight -500;
+    triggerHeight = hero.offsetHeight -300;
 }, 300);
 
 window.addEventListener('scroll', function (){
@@ -104,12 +111,13 @@ window.addEventListener('scroll', function (){
     let loc = window.scrollY;
            
 
-    if (loc > triggerHeight) {
+    
+    if (loc > triggerHeight -50) {
         hdr.classList.add('offset');
     } else {
         hdr.classList.remove('offset');
     }
-    if (loc > triggerHeight + 490) {
+    if (loc > triggerHeight + 120) {
         hdr.classList.remove('offset');
         hdr.classList.add('scrolled');
     } else {
@@ -254,4 +262,45 @@ window.addEventListener('resize', function(){
 */
 
 
+const ScrollSpy = function() {
 
+    const sections = document.querySelectorAll(".target-section");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlight);
+
+    function navHighlight() {
+    
+        // Get current scroll position
+        let scrollY = window.scrollY;
+    
+        // Loop through sections to get height(including padding and border), 
+        // top and ID values for each
+        sections.forEach(function(current) {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            const sectionId = current.getAttribute("id");
+        
+           /* If a section enters the window it will get its link's parent tag "li" 
+            * will get a ClassID of "current". Else if it leaves the screen 
+            * the ClassID of "current" will get removed from that link's parent tag*/
+            
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                document.querySelector(".header_nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
+            } else {
+                document.querySelector(".header_nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
+            }
+        });
+    }
+
+};
+
+
+
+
+(function ssInit() {
+
+    
+    ScrollSpy();
+
+})();
